@@ -4,10 +4,12 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 body {
   background-image: url("background.jpg");
   margin-top: 5px;
 }
+
 h4 {
   background: #fff;
   width: 27%;
@@ -17,6 +19,7 @@ h4 {
   outline: 2px solid #3a4452;
   text-align: center;
 }
+
 .container {
   width: 100%;
   height: 80vh;
@@ -24,11 +27,15 @@ h4 {
   align-items: center;
   justify-content: center;
 }
+
 .calculator {
   background: #3a4452;
   padding: 20px;
   border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
 }
+
 .calculator form input {
   border: 0;
   outline: 0;
@@ -40,6 +47,7 @@ h4 {
   margin: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
+
 form .display {
   display: flex;
   justify-content: flex-end;
@@ -47,7 +55,9 @@ form .display {
   background: #3a4452;
   border-radius: 10px;
   box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
+
 form .display input {
   text-align: right;
   flex: 1;
@@ -55,19 +65,25 @@ form .display input {
   box-shadow: none;
   height: 100px;
 }
+
 form input.equal {
   width: 130px;
 }
+
 .btn:hover {
   background: #3a4452;
   color: black;
 }
 
-/* Media Query for Responsiveness */
+/* Media Query for Tablets and Small Screens */
 @media (max-width: 768px) {
   h4 {
     width: 70%;
     font-size: 1.1em;
+  }
+  .calculator {
+    padding: 15px;
+    width: 80%;
   }
   .calculator form input {
     width: 45px;
@@ -84,15 +100,21 @@ form input.equal {
   }
 }
 
+/* Media Query for Mobile Screens */
 @media (max-width: 480px) {
   h4 {
     width: 80%;
     font-size: 1em;
   }
+  .calculator {
+    padding: 10px;
+    width: 90%;
+  }
   .calculator form input {
     width: 40px;
     height: 40px;
     font-size: 16px;
+    margin: 4px;
   }
   form .display input {
     font-size: 28px;
